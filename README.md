@@ -13,8 +13,9 @@ The solution follows a **three-stage pipeline** that has proven most effective i
 - **High-performance processing** suitable for documents with 50+ pages
 - **Robust error handling** for text overflow and font substitution challenges
 
-## Technical Implementation Details
 
+# 🎯 What's Included
+## Technical Implementation Details
 ### Text Extraction and Layout Preservation
 
 The solution uses **PyMuPDF's advanced text extraction** with the `get_text("dict", flags=11)` method, which provides:
@@ -81,9 +82,9 @@ Option 3: Kubernetes Production
 bash./deploy.sh --type k8s --env production --image v1.0.0
 
 
-🎯 What's Included
 
-✅ Production Features
+
+✅ For Production Features : Follow this Directory: https://github.com/rganeshsharma/pdf-translator-service-de_en_implementation 
 
 Auto-scaling: 2-10 pods based on CPU/memory
 Health monitoring: Liveness, readiness, startup probes
