@@ -72,15 +72,17 @@ The **coordinate-based replacement approach** maintains visual fidelity:
 
 The architecture follows cloud-native best practices with security, scalability, and observability built in from day one. 🎯
 
-🚀 Quick Deployment Options
-    Option 1: Local Development
-    bash    chmod +x deploy.sh
-    bash        ./deploy.sh --type local
+🚀 Quick Deployment Options:
+
+    Option 1: Local Development:
+        chmod +x deploy.sh
+        ./deploy.sh --type local
     
-    Option 2: Docker Deployment
-        bash./deploy.sh --type docker
-    Option 3: Kubernetes Production
-    bash./deploy.sh --type k8s --env production --image v1.0.0
+    Option 2: Docker Deployment:
+        ./deploy.sh --type docker
+        
+    Option 3: Kubernetes Production:
+        ./deploy.sh --type k8s --env production --image v1.0.0
 
 
 
