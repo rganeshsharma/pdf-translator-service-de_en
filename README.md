@@ -1,6 +1,6 @@
 # Local PDF Translation with Layout Preservation
 
-This comprehensive Python solution translates German PDF files to English entirely offline while preserving original formatting and layout. The approach combines PyMuPDF for text extraction and recreation, Hugging Face Transformers with MarianMT for high-quality offline translation, and sophisticated coordinate-based text replacement to maintain document structure.
+This comprehensive Python solution translates German PDF files to English entirely offline while preserving original formatting and layout. The approach combines PyMuPDF for text extraction and recreation, Hugging Face Transformers with MarianMT for high-quality offline translation, and sophisticated coordinate-based text replacement to maintain document structure. You can further extend this to suit any language translation you want by simply creating new classes and seraching the Huggung =Face Transformer models for your language. 
 
 ## Core Architecture and Approach
 
