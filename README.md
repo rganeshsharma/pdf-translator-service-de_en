@@ -73,68 +73,15 @@ The **coordinate-based replacement approach** maintains visual fidelity:
 The architecture follows cloud-native best practices with security, scalability, and observability built in from day one. 🎯
 
 🚀 Quick Deployment Options
-Option 1: Local Development
-bashchmod +x deploy.sh
-./deploy.sh --type local
-Option 2: Docker Deployment
-bash./deploy.sh --type docker
-Option 3: Kubernetes Production
-bash./deploy.sh --type k8s --env production --image v1.0.0
+    Option 1: Local Development
+    bash    chmod +x deploy.sh
+    bash        ./deploy.sh --type local
+    
+    Option 2: Docker Deployment
+        bash./deploy.sh --type docker
+    Option 3: Kubernetes Production
+    bash./deploy.sh --type k8s --env production --image v1.0.0
 
-
-
-
-✅ For Production Features : Follow this Directory: https://github.com/rganeshsharma/pdf-translator-service-de_en_implementation 
-
-Auto-scaling: 2-10 pods based on CPU/memory
-Health monitoring: Liveness, readiness, startup probes
-SSL/TLS support: Cert-manager integration
-File processing: Async with cleanup policies
-Security: Network policies, non-root containers
-Observability: Prometheus metrics + Grafana dashboards
-
-✅ Development Features
-
-Offline models: No SSL certificate issues
-Hot reloading: FastAPI with auto-reload
-Testing suite: Unit, integration, and load tests
-Code quality: Linting, type checking, security scanning
-
-✅ DevOps Features
-
-CI/CD pipelines: Automated testing and deployment
-Multi-environment: dev/staging/production configs
-Container scanning: Vulnerability detection
-Helm packaging: Easy version management
-
-🌟 Key Highlights
-🔧 Enterprise-Ready
-
-Horizontal pod autoscaling (HPA)
-Persistent storage for file processing
-Network policies for security
-Resource limits and requests
-
-📊 Production Monitoring
-
-Health check endpoints (/health, /metrics)
-Prometheus metrics collection
-Grafana dashboard templates
-Alert manager integration
-
-🔒 Security First
-
-Non-root containers
-Read-only root filesystem
-Security context policies
-Container image scanning
-
-🚀 Easy Deployment
-
-One-command deployment script
-Multiple environment support
-Automated rollbacks and health checks
-Complete documentation
 
 
 ## Alternative Approaches
