@@ -152,6 +152,9 @@ python pdf_translator.py your_german_file.pdf translated_english.pdf --model "./
 python quick_setup.py
 ```
 
+
+
+
 This will:
 
 ✅ Download the model offline (bypassing SSL)
@@ -161,6 +164,9 @@ This will:
 ✅ Create usage examples
 
 ✅ Give you clear instructions
+
+
+
 
 
 
