@@ -166,12 +166,19 @@ This will:
 
 How this Works?
 
+
 Bypasses SSL completely - Downloads using unverified SSL context
+
 Works on corporate networks as well- No certificate verification needed
+
 Fully offline after download - No internet required for translation
+
 Handles all edge cases - Retries, proper headers, chunked downloads
+
 Downloads everything once (with SSL bypass)
+
 Runs completely offline afterward
+
 No dependency on certificates or network policies
 
 
