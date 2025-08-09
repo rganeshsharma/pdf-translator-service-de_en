@@ -69,21 +69,100 @@ The **coordinate-based replacement approach** maintains visual fidelity:
 - **Processing time** depends on text density and translation model performance
 
 
+# Installation and Setup
+## System Requirements
 
-The architecture follows cloud-native best practices with security, scalability, and observability built in from day one. 🎯
+Python: 3.8 or higher (3.9+ recommended)
+RAM: 4GB minimum (8GB recommended for large documents)
+Storage: 1-2GB for models and dependencies
+OS: Windows, Linux, or macOS
 
-🚀 Quick Deployment Options:
+# Installation Steps
 
-    Option 1: Local Development:
-        chmod +x deploy.sh
-        ./deploy.sh --type local
-    
-    Option 2: Docker Deployment:
-        ./deploy.sh --type docker
-        
-    Option 3: Kubernetes Production:
-        ./deploy.sh --type k8s --env production --image v1.0.0
+Create a Virtual Environment (recommended):
 
+```bash
+python -m venv pdf_translator_env
+source pdf_translator_env/bin/activate  # Linux/Mac
+# pdf_translator_env\Scripts\activate  # Windows
+```
+
+## Install Required Dependencies:
+
+```bash
+pip install PyMuPDF transformers torch sentencepiece
+```
+## Alternative Installation with Requirements File:
+
+```bash
+# Create requirements.txt
+cat > requirements.txt << EOF
+PyMuPDF>=1.23.0
+transformers>=4.30.0
+torch>=2.0.0
+sentencepiece>=0.1.99
+EOF
+
+pip install -r requirements.txt
+
+# Verify Installation:
+
+python -c "import pymupdf, transformers, torch; print('Installation successful!')"
+
+```
+
+# Download Model Offline
+
+```bash
+# Run the offline downloader
+python offline_model_downloader.py
+```
+
+This will:
+✅ Bypass SSL completely
+✅ Download all model files to ./models/Helsinki-NLP/opus-mt-de-en/
+✅ Work on corporate networks
+✅ Create a test script
+
+# Test the Downloaded Model
+
+```bash
+# Test that the model works offline
+python test_offline_model.py
+```
+
+# Run Your PDF Translation
+```bash
+# Use the offline model
+python pdf_translator.py your_german_file.pdf translated_english.pdf --offline
+
+# OR specify the exact model path
+python pdf_translator.py your_german_file.pdf translated_english.pdf --model "./models/Helsinki-NLP/opus-mt-de-en"
+```
+
+# Alternative: One-Command Setup
+
+```bash
+# Run the complete setup script
+python quick_setup.py
+```
+
+This will:
+
+✅ Download the model offline (bypassing SSL)
+✅ Test that it works
+✅ Create usage examples
+✅ Give you clear instructions
+
+How this Works?
+
+Bypasses SSL completely - Downloads using unverified SSL context
+Works on corporate networks as well- No certificate verification needed
+Fully offline after download - No internet required for translation
+Handles all edge cases - Retries, proper headers, chunked downloads
+Downloads everything once (with SSL bypass)
+Runs completely offline afterward
+No dependency on certificates or network policies
 
 
 ## Alternative Approaches

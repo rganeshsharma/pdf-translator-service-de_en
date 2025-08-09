@@ -168,7 +168,7 @@ except Exception as e:
     sys.exit(1)
 '''
         
-        with open("test_offline_model.py", 'w') as f:
+        with open("test_offline_model.py", 'w', encoding='utf-8') as f:
             f.write(test_script)
         
         print("📝 Created test_offline_model.py")
