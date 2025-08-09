@@ -148,7 +148,6 @@ python quick_setup.py
 ```
 
 This will:
-
 ✅ Download the model offline (bypassing SSL)
 ✅ Test that it works
 ✅ Create usage examples
