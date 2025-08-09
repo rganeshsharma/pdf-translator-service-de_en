@@ -119,10 +119,15 @@ python offline_model_downloader.py
 ```
 
 This will:
+
 ✅ Bypass SSL completely
+
 ✅ Download all model files to ./models/Helsinki-NLP/opus-mt-de-en/
+
 ✅ Work on corporate networks
+
 ✅ Create a test script
+
 
 # Test the Downloaded Model
 
@@ -148,10 +153,16 @@ python quick_setup.py
 ```
 
 This will:
+
 ✅ Download the model offline (bypassing SSL)
+
 ✅ Test that it works
+
 ✅ Create usage examples
+
 ✅ Give you clear instructions
+
+
 
 How this Works?
 
