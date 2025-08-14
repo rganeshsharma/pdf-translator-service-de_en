@@ -249,3 +249,7 @@ def ocr_based_translation(input_pdf, output_pdf):
                 translated = translate_text(text)
                 replace_text_in_image(page, bbox, translated)
 ```
+
+**Built with ❤️ by the Ganesh Sharma**
+
+*Making document translation accessible, fast, and reliable for everyone.*
